@@ -1,14 +1,14 @@
 @font-face{
     font-family: "tasa";
-    src: url(../assets/tasa.ttf) format("truetype");
+    src: url(assets/tasa.ttf) format("truetype");
 }
 @font-face{
     font-family: "jura";
-    src: url(../assets/jura.ttf) format("truetype");
+    src: url(assets/jura.ttf) format("truetype");
 }
 @font-face{
     font-family: "kaushan";
-    src: url(../assets/kaushan.ttf) format("truetype");
+    src: url(assets/kaushan.ttf) format("truetype");
 }
 body{
     display:flex;
