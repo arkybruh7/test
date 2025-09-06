@@ -1,0 +1,162 @@
+@font-face{
+    font-family: "tasa";
+    src: url(../assets/tasa.ttf) format("truetype");
+}
+@font-face{
+    font-family: "jura";
+    src: url(../assets/jura.ttf) format("truetype");
+}
+@font-face{
+    font-family: "kaushan";
+    src: url(../assets/kaushan.ttf) format("truetype");
+}
+body{
+    display:flex;
+    flex-direction: column;
+    height:100vh;
+    margin: 0%;
+    background: radial-gradient( circle 1151px, #F1E2F7, #8385C8 );
+}
+.header{
+    display: flex;
+    height: 13%;
+    width: 100%;
+    background: radial-gradient(ellipse 85% 70%,#8e90d0,#5F62B7);
+    opacity: 80%;
+    box-shadow: 3px 3px 4px #8c8ecd;
+    justify-content: center;
+}
+.header:hover{
+    box-shadow: 4px 4px 5px #8c8ecd;
+}
+    
+.navigation{
+    margin: 0;
+    height: 100%;
+    width: 90%;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.navtxt{
+    margin-left:4%;
+    margin-right: 4%;
+    color: white;
+    text-shadow: px 5px 5px #6b6d9a ;
+    font-size: 1.5cqw;
+    font-family: "jura";
+    text-decoration: none;
+
+}
+
+.navtxt:hover{
+    transform: scale(1.16,1.16);
+}
+.maintxtdiv{
+    display: flex;
+    position: relative;
+    margin-top: 20px;
+    height: 80%;   /*height bacheko 87% after header at 1 after that page ma scroll dekhauxa*/
+    width: 95%;
+    align-items: center;
+    justify-content: center; 
+    align-self: center;
+
+}
+.maintxt{
+    text-align: center;
+    font-size: 250px;
+    color: #5f6198;
+    opacity:30%;
+    text-shadow: 8px 8px 13px #8183ba;
+    font-family: "kaushan";
+    margin-left: -30px;
+    animation: vanishinOP 0.3s 1 ;
+
+}
+.grapes{
+    position: absolute;
+    width: 444px;
+    height:460px;
+    margin-left: 95px;
+    margin-top: 115px;
+    filter: drop-shadow(7px 7px 11px #cacbeb) ; 
+    animation: vanishin 1s 1 ;
+}
+
+.arrow{
+    position: absolute; /*vertically center ra right side ma aauna */
+    height: 200px;  
+    top: 55%; /*parent dekhi 50% down */
+    right: 10px; /* completely right side ma*/
+    transform: translateY(-50%); /*aafno height ko aadi mathi aauney*/
+}
+.arrow:hover{
+    transform: matrix(1.3,0,0,1.3,0,-105);
+    filter: drop-shadow(7px 7px 11px #cacbeb) ; 
+}
+
+.arrowleft{
+    position: absolute; 
+    height: 200px;  
+    top: 55%; 
+    left: 10px; 
+    transform: translateY(-50%); 
+}
+.arrowleft:hover{
+    transform: matrix(1.3,0,0,1.3,0,-105);
+    filter: drop-shadow(7px 7px 11px #cacbeb) ; 
+}
+@keyframes slide{
+    0%  {transform: scale(1,1) translateX(0px)}
+    100% {transform: scale(0.1,0.1) translateX(100vh)}
+}
+/*All animation below this is From  github user @miniMAC*/
+@keyframes swap {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: scale(0, 0) translate(-700px, 0px);
+    transform: scale(0, 0) translate(-700px, 0px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    -webkit-transform: scale(1, 1) translate(0px, 0px);
+    transform: scale(1, 1) translate(0px, 0px);
+  }
+}
+@keyframes vanishinOP {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(2, 2);
+    filter: blur(90px);
+  }
+  100% {
+    opacity: 0.3;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+    filter: blur(0px);
+  }
+}
+@keyframes vanishin {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(2, 2);
+    filter: blur(90px);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+    filter: blur(0px);
+  }
+}
