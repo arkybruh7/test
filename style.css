@@ -1,14 +1,14 @@
 @font-face{
     font-family: "tasa";
-    src: url(../assets/tasa.ttf) format("truetype");
+    src: url(assets/tasa.ttf) format("truetype");
 }
 @font-face{
     font-family: "jura";
-    src: url(../assets/jura.ttf) format("truetype");
+    src: url(assets/jura.ttf) format("truetype");
 }
 @font-face{
     font-family: "kaushan";
-    src: url(../assets/kaushan.ttf) format("truetype");
+    src: url(assets/kaushan.ttf) format("truetype");
 }
 body{
     display:flex;
@@ -22,7 +22,7 @@ body{
     height: 13%;
     width: 100%;
     background: radial-gradient(ellipse 85% 70%,#8e90d0,#5F62B7);
-    opacity: 80%;
+    opacity: 75%;
     box-shadow: 3px 3px 4px #8c8ecd;
     justify-content: center;
 }
@@ -45,16 +45,34 @@ body{
     margin-left:4%;
     margin-right: 4%;
     color: white;
-    text-shadow: px 5px 5px #6b6d9a ;
+    text-shadow: 5px 5px 5px #6b6d9a ;
     font-size: 1.5cqw;
     font-family: "jura";
     text-decoration: none;
+    position: relative;
 
 }
-
 .navtxt:hover{
-    transform: scale(1.16,1.16);
+   transform: scale(1.16,1.16);
 }
+.navtxt::after{
+  content: " ";
+  position: absolute;
+  height: 2px;
+  width: 75px;
+  background: white;
+  display: inline-block;
+  bottom: -9px;
+  border-radius: 10%;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+ border-radius: 13%;
+
+}
+.navtxt:hover::after{
+ transform: scaleX(1) translatex(-50%); 
+}
+
 .maintxtdiv{
     display: flex;
     position: relative;
@@ -69,9 +87,9 @@ body{
 .maintxt{
     text-align: center;
     font-size: 250px;
-    color: #5f6198;
+    color: #9B9DCE;
     opacity:30%;
-    text-shadow: 8px 8px 13px #8183ba;
+    text-shadow: 8px 8px 13px #DDCBE5;
     font-family: "kaushan";
     margin-left: -30px;
     animation: vanishinOP 0.3s 1 ;
@@ -111,8 +129,12 @@ body{
     filter: drop-shadow(7px 7px 11px #cacbeb) ; 
 }
 @keyframes slide{
-    0%  {transform: scale(1,1) translateX(0px)}
-    100% {transform: scale(0.1,0.1) translateX(100vh)}
+    0% {transform: scaleX(0);
+    transform-origin: center;}
+    100%  {transform: scaleX(1);
+      transform-origin: center;;
+    }
+
 }
 /*All animation below this is From  github user @miniMAC*/
 @keyframes swap {
