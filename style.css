@@ -15,19 +15,27 @@ body{
     flex-direction: column;
     height:100vh;
     margin: 0%;
-    background: radial-gradient( circle 1151px, #F1E2F7, #8385C8 );
+    overflow-x: hidden;     
+     background: radial-gradient( circle 1151px, #F1E2F7, #8385C8 );
 }
+
 .header{
     display: flex;
     height: 13%;
     width: 100%;
-    background: radial-gradient(ellipse 85% 70%,#8e90d0,#5F62B7);
     opacity: 75%;
-    box-shadow: 3px 3px 4px #8c8ecd;
     justify-content: center;
 }
+.grapesHeader{
+  background: radial-gradient(ellipse 85% 70%,#8e90d0,#5F62B7);
+  box-shadow: 3px 3px 4px #8c8ecd;
+}
+.appleHeader{
+  background: radial-gradient(ellipse 85% 70%,#E45E5E,#E40E0E);
+  box-shadow: 3px 3px 4px #d98080;
+}
 .header:hover{
-    box-shadow: 4px 4px 5px #8c8ecd;
+    box-shadow: 4px 4px 5px #b0b0be;
 }
     
 .navigation{
@@ -45,7 +53,7 @@ body{
     margin-left:4%;
     margin-right: 4%;
     color: white;
-    text-shadow: 5px 5px 5px #6b6d9a ;
+    text-shadow: 5px 5px 5px #c0c1d1 ;
     font-size: 1.5cqw;
     font-family: "jura";
     text-decoration: none;
@@ -87,22 +95,38 @@ body{
 .maintxt{
     text-align: center;
     font-size: 250px;
-    color: #9B9DCE;
     opacity:30%;
-    text-shadow: 8px 8px 13px #DDCBE5;
     font-family: "kaushan";
     margin-left: -30px;
     animation: vanishinOP 0.3s 1 ;
 
 }
+.grapesMaintxt{
+    color: #9B9DCE;
+    text-shadow: 8px 8px 13px #DDCBE5;
+}
+
+.appleMaintxt{
+    color: #EA1818;
+    text-shadow: 8px 8px 13px #d67a7a;
+}
+
 .grapes{
     position: absolute;
     width: 444px;
     height:460px;
     margin-left: 95px;
     margin-top: 115px;
-    filter: drop-shadow(7px 7px 11px #cacbeb) ; 
-    animation: vanishin 1s 1 ;
+}
+.apple{
+    position: absolute;
+    height:580px;
+    margin-left: 95px;
+    margin-top: 115px;
+}
+.grapesFilter{
+  filter: drop-shadow(7px 7px 11px #cacbeb) ; 
+  animation: vanishin 1s 1 ;
 }
 
 .arrow{
@@ -111,6 +135,7 @@ body{
     top: 55%; /*parent dekhi 50% down */
     right: 10px; /* completely right side ma*/
     transform: translateY(-50%); /*aafno height ko aadi mathi aauney*/
+    cursor: pointer;
 }
 .arrow:hover{
     transform: matrix(1.3,0,0,1.3,0,-105);
@@ -123,6 +148,7 @@ body{
     top: 55%; 
     left: 10px; 
     transform: translateY(-50%); 
+    cursor: pointer;
 }
 .arrowleft:hover{
     transform: matrix(1.3,0,0,1.3,0,-105);
@@ -182,3 +208,5 @@ body{
     filter: blur(0px);
   }
 }
+
+
